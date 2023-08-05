@@ -3,7 +3,7 @@ name: "MERGE SUBSCRIPTION"
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0,12 * * *'
+    - cron: '31 0,15 * * *'
     
 jobs:
   build:
@@ -20,8 +20,8 @@ jobs:
       - name: Execute PHP script
         run: |
           php index.php
-          git config --global user.email "yebekhe@gmail.com"
-          git config --global user.name "yebekhe"
+          git config --global user.email "sayhernameagain@gmail.com"
+          git config --global user.name "sarinaesmailzadeh"
           git config credential.helper store
           git add -A
           git commit -m "🚀 Merged Successfully - $(TZ='Asia/Tehran' date '+%Y-%m-%d %H:%M:%S')"
